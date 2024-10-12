@@ -1,0 +1,6 @@
+<div class="body bg-cyan-900">
+  <aside><app-side-bar></app-side-bar></aside>
+  <section><router-outlet></router-outlet></section>
+</div>
+<app-add-update-task *ngIf="showAddTaskMenu"></app-add-update-task>
+<app-task-menu *ngIf="showTaskMenu"></app-task-menu>

@@ -1,0 +1,92 @@
+.body {
+  background-color: rgb(168, 247, 174);
+  border-radius: 20px;
+  margin: 0px 20px;
+  padding: 20px;
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    svg {
+      width: 40px;
+      cursor: pointer;
+      transition: 0.5s;
+    }
+    svg:hover {
+      fill: #36ba98;
+      transform: rotate(.25turn);
+    }
+  }
+}
+.tasks {
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  .task {
+    padding: 10px;
+    background-color: white;
+    margin: 5px;
+    border-radius: 20px;
+    .edit {
+      display: flex;
+      align-items: center;
+      justify-content: right;
+    }
+    .update,
+    .delete,
+    .finish {
+      margin: 5px;
+      svg {
+        width: 15px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+.delete svg:hover {
+  fill: red;
+  animation: up-down 0.5s;
+}
+.update svg:hover {
+  fill: aqua;
+  animation: up-down 0.5s;
+}
+.finish svg:hover {
+  fill: green;
+  animation: up-down 0.5s;
+}
+.taskHeader {
+  padding: 5px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+.taskHeader:hover {
+  background-color: rgb(168, 247, 174);
+}
+.taskFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5px;
+  .completed,
+  .incompleted {
+    padding: 5px;
+    border-radius: 14px;
+    color: white;
+  }
+  .completed {
+    background-color: #36ba98;
+  }
+  .incompleted {
+    background-color: #e76f51;
+  }
+}
+
+@keyframes up-down {
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}

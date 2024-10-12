@@ -1,0 +1,46 @@
+<div class="body">
+  <h3>Task Stepper</h3>
+  <form #signUp="ngForm" (ngSubmit)="submit(signUp.value)">
+    <div class="row">
+      <input
+        type="text"
+        name="displayName"
+        placeholder="write your user name"
+        required
+        ngModel
+        #user="ngModel"
+        minlength="5"
+      />
+    </div>
+    <div class ='errorMes' *ngIf="user.dirty && user.touched && user.hasError('required')">this field is requird</div>
+    <div class ='errorMes' *ngIf="user.dirty && user.touched && user.hasError('minlength')">you should have atleast 5 charachters</div>
+    <div class="row">
+      <input
+      type="email"
+      name="email"
+      placeholder="write your email"
+      required
+      ngModel
+      email
+      #email="ngModel"
+      />
+    </div>
+    <div class ='errorMes' *ngIf="email.dirty && email.touched && email.hasError('required')">this field is requird</div>
+    <div class ='errorMes' *ngIf="email.dirty && email.touched && email.hasError('email')">this not is valid email</div>
+    <div class="row">
+      <input
+      type="password"
+      name="password"
+      placeholder="write your password"
+      required
+      ngModel
+      #password="ngModel"
+      minlength="8"
+      />
+    </div>
+    <div class ='errorMes' *ngIf="password.dirty && password.touched && password.hasError('required')">this field is requird</div>
+    <div class ='errorMes' *ngIf="password.dirty && password.touched && password.hasError('minlength')">you should have atleast 8 charachters</div>
+    <button [disabled]="signUp.invalid">sign-up</button>
+   <span><a routerLink="/account"> if u have account click here</a></span>
+  </form>
+</div>

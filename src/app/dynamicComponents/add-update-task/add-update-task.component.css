@@ -1,0 +1,61 @@
+.body {
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  form {
+    height: 80vh;
+    overflow: auto;
+    background-color: rgb(168, 247, 174);
+    margin: 30px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    input {
+      padding: 5px;
+      border-radius: 10px;
+      outline: none;
+    }
+    .steps {
+      display: flex;
+      flex-direction: column;
+    }
+    .addStep {
+      cursor: pointer;
+      background-color: #40a578;
+      padding: 10px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 5px;
+    }
+  }
+}
+button[type="submit"] {
+  padding: 5px;
+  border-radius: 10px;
+  outline: none;
+  margin-top: 5px;
+  background-color: #40a578;
+  cursor: pointer;
+}
+.close {
+  padding: 5px;
+  width: 20px;
+  cursor: pointer;
+  fill: black;
+  background-color: rgba(255, 0, 0, 0.418);
+  transition: 0.3s;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  border-radius: 20px;
+  border: 2px solid black;
+}
+.close:hover {
+  background-color: red;
+}

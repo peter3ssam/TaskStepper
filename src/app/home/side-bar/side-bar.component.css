@@ -1,0 +1,60 @@
+.body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: rgb(168, 247, 174);
+  margin-left: 20px;
+  height: 90vh;
+  border-radius: 20px;
+  .account {
+    transition: 0.5s;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    img {
+      max-width: 50px;
+    }
+    cursor: pointer;
+  }
+  .account:hover {
+    border-radius: 10px;
+    background-color: rgba(128, 128, 128, 0.644);
+  }
+}
+svg {
+  width: 20px;
+  margin-right: 10px;
+}
+.tasks {
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+.completed {
+  padding: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: 0.5s;
+}
+.sign-out {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  transition: 0.5s;
+}
+.sign-out:hover {
+  border-radius: 10px;
+  background-color: rgba(128, 128, 128, 0.644);
+}
+.active ,.tasks:hover,.completed:hover{
+  transition: 0.5s;
+  background-color: rgba(128, 128, 128, 0.644);
+  border-radius: 10px;
+}

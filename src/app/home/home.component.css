@@ -1,0 +1,15 @@
+.body {
+
+
+  /* display: flex;
+  justify-content: space-between; */
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-areas: "aside aside section section section section section section section section";
+}
+aside {
+  grid-area: aside;
+}
+section {
+  grid-area: section;
+}

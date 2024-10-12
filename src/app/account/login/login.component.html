@@ -1,0 +1,61 @@
+<div class="body">
+  <h3>Task Stepper</h3>
+  <form #login="ngForm" (ngSubmit)="submit(login.value)">
+    <div class="row">
+      <input
+        type="email"
+        name="email"
+        placeholder="write your email"
+        required
+        ngModel
+        email
+        #email="ngModel"
+      />
+    </div>
+    <div
+      class="errorMes"
+      *ngIf="email.dirty && email.touched && email.hasError('required')"
+    >
+      this field is requird
+    </div>
+    <div
+      class="errorMes"
+      *ngIf="email.dirty && email.touched && email.hasError('email')"
+    >
+      this not is valid email
+    </div>
+    <div class="row">
+      <input
+        type="password"
+        name="password"
+        placeholder="write your password"
+        required
+        ngModel
+        #password="ngModel"
+        minlength="8"
+      />
+    </div>
+    <div
+      class="errorMes"
+      *ngIf="
+        password.dirty && password.touched && password.hasError('required')
+      "
+    >
+      this field is requird
+    </div>
+    <div
+      class="errorMes"
+      *ngIf="
+        password.dirty && password.touched && password.hasError('minlength')
+      "
+    >
+      you should have atleast 8 charachters
+    </div>
+    <button [disabled]="login.invalid">Login</button>
+    <span
+      ><a routerLink="/account/signup">
+        if u don't have account click here</a
+      ></span
+    >
+  </form>
+</div>
